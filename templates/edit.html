@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Edit Task</title>
+
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+
+    <div class="card">
+
+
+        <div class="header">
+            <p class="subtitle">UPDATE YOUR TASK</p>
+            <h1>Edit Task</h1>
+            <p class="description">Make changes to your task</p>
+        </div>
+
+
+        <form class="add-form" method="POST">
+
+
+            <input
+                type="text"
+                name="task"
+                value="{{ todo.task }}"
+                placeholder="Enter task"
+                required
+                autofocus
+            >
+
+
+            <button type="submit" class="btn btn-primary">
+                Save
+            </button>
+
+
+        </form>
+
+
+        <a href="{{ url_for('get_todos') }}"
+           class="btn btn-cancel">
+            Cancel
+        </a>
+
+
+    </div>
+
+
+</body>
+</html>
